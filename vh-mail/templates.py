@@ -6,6 +6,8 @@ EXIM_CONFIG = r"""
 SMTP_PORT = 25
 LOCAL_INTERFACES = <; 0.0.0.0.25 ; 0.0.0.0.465 ; [::0]:25 ; [::0]:465
 CONFDIR = /etc/exim4
+#disable ipV6 so email can deliverd to Gmail account, and others.
+disable_ipv6 = true
 
 LOCAL_DOMAINS = %(local_domains)s
 ETC_MAILNAME = %(mailname)s
